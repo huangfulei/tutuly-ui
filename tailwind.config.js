@@ -5,6 +5,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 // eslint-disable-next-line no-undef
 module.exports = {
 	content: ["./src/**/*.{js,jsx,ts,tsx}"],
+	darkMode: "class", // or "class", "auto"
 	theme: {
 		fontSize: {
 			xs: ["0.75rem", { lineHeight: "1rem" }],

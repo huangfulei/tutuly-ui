@@ -7,4 +7,9 @@ export const parameters = {
 			date: /Date$/,
 		},
 	},
+	layout: "centered",
 };
+
+// export const globalTypes = {
+// 	darkMode: true,
+// };

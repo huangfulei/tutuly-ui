@@ -81,12 +81,10 @@
         "camelcase": "error",
         "spaced-comment": "error",
         "semi": ["error", "always"],
-//        "prettier/prettier": "error",
         "no-duplicate-imports": "error",
         "no-unused-vars": "error",
         "no-trailing-spaces": "error",
         "no-unused-expressions": "error",
-        "no-extra-parens": "error",
         "no-extra-semi": "error",
         "no-extra-boolean-cast": "error"
     },

@@ -1,7 +1,6 @@
 {
   "name": "tutuly-ui",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
@@ -82,7 +81,24 @@
     "postcss": "^8.4.14",
     "prettier": "^2.7.1",
     "prop-types": "^15.8.1",
+    "storybook-tailwind-dark-mode": "^1.0.12",
     "tailwindcss": "^3.1.5",
     "webpack": "^5.73.0"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.tsx",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huangfulei/tutuly-ui.git"
+  },
+  "keywords": [
+    "tutuly",
+    "ui"
+  ],
+  "author": "Fulei Huang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huangfulei/tutuly-ui/issues"
+  },
+  "homepage": "https://github.com/huangfulei/tutuly-ui#readme"
 }
