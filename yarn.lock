@@ -2934,6 +2934,13 @@
     "@svgr/plugin-svgo" "^5.5.0"
     loader-utils "^2.0.0"
 
+"@tailwindcss/forms@^0.5.2":
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/forms/-/forms-0.5.2.tgz#4ef45f9916dcb37838cbe7fecdcc4ba7a7c2ab59"
+  integrity sha512-pSrFeJB6Bg1Mrg9CdQW3+hqZXAKsBrSG9MAfFLKy1pVA4Mb4W7C0k7mEhlmS2Dfo/otxrQOET7NJiJ9RrS563w==
+  dependencies:
+    mini-svg-data-uri "^1.2.3"
+
 "@testing-library/dom@^8.3.0":
   version "8.14.1"
   resolved "https://registry.yarnpkg.com/@testing-library/dom/-/dom-8.14.1.tgz#75b12617807a2ba7db71dfda8527caddb06932ae"
@@ -9834,6 +9841,11 @@ mini-css-extract-plugin@^2.4.5:
   dependencies:
     schema-utils "^4.0.0"
 
+mini-svg-data-uri@^1.2.3:
+  version "1.4.4"
+  resolved "https://registry.yarnpkg.com/mini-svg-data-uri/-/mini-svg-data-uri-1.4.4.tgz#8ab0aabcdf8c29ad5693ca595af19dd2ead09939"
+  integrity sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==
+
 minimalistic-assert@^1.0.0, minimalistic-assert@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/minimalistic-assert/-/minimalistic-assert-1.0.1.tgz#2e194de044626d4a10e7f7fbc00ce73e83e4d5c7"
@@ -13258,6 +13270,11 @@ synckit@^0.7.2:
   dependencies:
     "@pkgr/utils" "^2.2.0"
     tslib "^2.4.0"
+
+tailwind-merge@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/tailwind-merge/-/tailwind-merge-1.4.0.tgz#094dca0f691ac47c7123121c6d3d42e8c0df0aa7"
+  integrity sha512-SuI3jDWwvBEPP55PkP3zSGbQ7w+A9RN5wsb4hJeDV+oS8UDghhWOt1shviI1lGuDTRuos7fxD5mCo6Uu4A/tjg==
 
 tailwindcss@^3.0.2, tailwindcss@^3.1.5:
   version "3.1.5"

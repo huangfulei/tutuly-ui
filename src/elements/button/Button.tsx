@@ -1,61 +1,28 @@
-import clsx from "clsx";
 import React from "react";
+import { twMerge } from "tailwind-merge";
 
-const baseStyles = {
-	solid: "group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2",
-	outline: "group inline-flex ring-1 items-center justify-center rounded-full py-2 px-4 text-sm focus:outline-none",
-};
+const primaryButtonStyles =
+	"inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white dark:text-black bg-indigo-600 dark:bg-indigo-900 hover:bg-indigo-700 dark:hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-indigo-900";
 
-const variantStyles = {
-	solid: {
-		slate: "bg-slate-900 text-white hover:bg-slate-700 hover:text-slate-100 active:bg-slate-800 active:text-slate-300 focus-visible:outline-slate-900",
-		blue: "bg-blue-600 text-white hover:text-slate-100 hover:bg-blue-500 active:bg-blue-800 active:text-blue-100 focus-visible:outline-blue-600",
-		white: "bg-white text-slate-900 hover:bg-blue-50 active:bg-blue-200 active:text-slate-600 focus-visible:outline-white",
-	},
-	outline: {
-		blue: "bg-blue-600 text-white hover:text-slate-100 hover:bg-blue-500 active:bg-blue-800 active:text-blue-100 focus-visible:outline-blue-600",
-		slate: "ring-slate-200 text-slate-700 hover:text-slate-900 hover:ring-slate-300 active:bg-slate-100 active:text-slate-600 focus-visible:outline-blue-600 focus-visible:ring-slate-300",
-		white: "ring-slate-700 text-white hover:ring-slate-500 active:ring-slate-700 active:text-slate-400 focus-visible:outline-white",
-	},
-};
+const secondaryButtonStyles =
+	"inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500";
 
-export interface ButtonProps {
-	variant?: "solid" | "outline";
-	color?: "slate" | "blue" | "white";
-	size?: "sm" | "md" | "lg";
+export interface ButtonProps extends React.ComponentProps<"button"> {
+	secondary?: boolean;
 	className?: string;
-	onClick?: () => void;
-	disabled?: boolean;
 	children?: React.ReactNode;
 }
 
 const Button: React.FC<ButtonProps> = props => {
-	const { variant = "solid", color = "slate", className, children, ...rest } = props;
+	const { secondary = false, className, children, ...rest } = props;
+
+	const buttonStyles = secondary ? secondaryButtonStyles : primaryButtonStyles;
 
 	return (
-		<>
-			<button className={clsx(baseStyles[variant], variantStyles[variant][color], className)} {...rest}>
-				{children}
-			</button>
-			<button
-				type='button'
-				className='inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'>
-				{children}
-			</button>
-		</>
+		<button type='button' className={twMerge(buttonStyles, className)} {...rest}>
+			{children}
+		</button>
 	);
 };
 
 export default Button;
-
-// export function Button({ variant = "solid", color = "slate", className, ...props }) {
-// 	return <button className={clsx(baseStyles[variant], variantStyles[variant][color], className)} {...props} />;
-// }
-//
-// export function ButtonLink({ variant = "solid", color = "slate", href, className, ...props }) {
-// 	return (
-// 		// <Link href={href}>
-// 		<a className={clsx(baseStyles[variant], variantStyles[variant][color], className)} {...props} />
-// 		// </Link>
-// 	);
-// }

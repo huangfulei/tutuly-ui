@@ -9,7 +9,3 @@ export const parameters = {
 	},
 	layout: "centered",
 };
-
-// export const globalTypes = {
-// 	darkMode: true,
-// };
