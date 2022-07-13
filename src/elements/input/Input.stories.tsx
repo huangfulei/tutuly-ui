@@ -15,3 +15,11 @@ Default.args = {
 	label: "Input",
 	type: "text",
 };
+
+export const NumberInput = Template.bind({});
+NumberInput.args = {
+	id: "number-input",
+	label: "Number Input",
+	type: "number",
+	step: "0.03",
+};

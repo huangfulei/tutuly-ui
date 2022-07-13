@@ -6,7 +6,7 @@ const inputStyles =
 
 const labelStyles = "mb-1 block text-sm font-medium text-gray-700";
 
-interface InputProps {
+interface InputProps extends React.ComponentProps<"input"> {
 	id: string;
 	label?: string;
 	type?: HTMLInputTypeAttribute;
